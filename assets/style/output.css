@@ -1924,11 +1924,11 @@ video {
 }
 
 .bg-header-img {
-  background-image: url('../img/hero-section-min.JPG');
+  background-image: url('../img/hero-section-min.jpg');
 }
 
 .bg-section-fixe {
-  background-image: url('../img/about-me-2-min-1024x683.JPG');
+  background-image: url('../img/about-me-2-min-1024x683.jpg');
 }
 
 .decoration-slice {
@@ -2789,14 +2789,14 @@ body{
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.hover\:bg-yellow-500:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-yellow-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:font-bold:hover {
@@ -2841,11 +2841,6 @@ body{
 .group:hover .group-hover\:text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
-}
-
-.group:hover .group-hover\:text-yellow-500 {
-  --tw-text-opacity: 1;
-  color: rgb(234 179 8 / var(--tw-text-opacity, 1));
 }
 
 @media (min-width: 640px) {
@@ -2938,16 +2933,12 @@ body{
     width: 50%;
   }
 
-  .\*\:lg\:w-auto > * {
-    width: auto;
-  }
-
   .\*\:lg\:w-1\/4 > * {
     width: 25%;
   }
 
-  .\*\:lg\:flex-grow > * {
-    flex-grow: 1;
+  .\*\:lg\:w-auto > * {
+    width: auto;
   }
 }
 
