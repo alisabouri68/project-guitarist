@@ -10,7 +10,7 @@ module.exports = {
         "header-img" : "url('../img/hero-section-min.jpg')",
         "section-fixe" : "url('../img/about-me-2-min-1024x683.jpg')",
         "guitar-lessons" : "url('../img/guitar-lessons.jpg')",
-        "guitar-stay-in-tuch" : "url('../img/stay-in-touch.jpg')"
+        "guitar-stay-in-tuch" : "url('../img/stay-in-touch.jpg')",
       },
 
      },
