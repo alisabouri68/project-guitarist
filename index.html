@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/output.css" />
+    <title>guitarist</title>
+  </head>
+
+  <body class="overflow-x-hidden font">
+    <!-- svg sprite -->
+    <svg class="hidden">
+      <symbol
+        id="instagram"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>Instagram</title>
+        <path
+          d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+        />
+      </symbol>
+      <symbol
+        id="pintrest"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>Pinterest</title>
+        <path
+          d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"
+        />
+      </symbol>
+      <symbol
+        id="facebook"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>Facebook</title>
+        <path
+          d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+        />
+      </symbol>
+      <symbol
+        id="youtub"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>YouTube</title>
+        <path
+          d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+        />
+      </symbol>
+      <symbol
+        id="bar"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </symbol>
+    </svg>
+    <!-- header start -->
+    <header class="w-full bg-header-img bg-cover bg-center bg-no-repeat">
+      <div
+        class="container mx-auto min-h-screen flex flex-wrap relative *:flex *:w-full"
+      >
+        <!-- navigation  -->
+        <nav class="justify-between self-start max-h-[150px]">
+          <!-- logo-header  -->
+          <a href="" class="p-5">
+            <figure>
+              <img src="assets/img/PP-MUSIC-150x40.png " alt="logo" />
+            </figure>
+          </a>
+          <!-- nav-list  -->
+          <div class="flex-center">
+            <ul class=" ">
+              <li class="group p-5">
+                <span class="lg:hidden cursor-pointer">
+                  <svg
+                    class="w-[2rem] h-[2rem] border-2 border-yellow-500 text-yellow-500"
+                  >
+                    <use href="#bar"></use>
+                  </svg>
+                </span>
+                <ul
+                  class="group-hover:h-auto group-hover:overflow-visible group-hover:visible lg:flex-center ps-5 flex-col w-full py-5 lg:py-0 h-0 invisible lg:h-auto lg:visible overflow-hidden absolute top-16 left-0 lg:flex gap-5 lg:flex-row lg:static *:text-white bg-black lg:bg-transparent"
+                >
+                  <li class="hover:text-yellow-500 transition-all duration-300">
+                    <a href="#"><span>Home</span></a>
+                  </li>
+                  <li class="hover:text-yellow-500 transition-all duration-300">
+                    <a href="#"><span>About</span></a>
+                  </li>
+                  <li class="hover:text-yellow-500 transition-all duration-300">
+                    <a href="#"><span>Lessons</span></a>
+                  </li>
+                  <li class="hover:text-yellow-500 transition-all duration-300">
+                    <a href="#"><span>Shows</span></a>
+                  </li>
+                  <li class="hover:text-yellow-500 transition-all duration-300">
+                    <a href="#"><span>Contact</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- header-buttom -->
+        <div class="flex-col self-center ps-5 md:ps-16 gap-2">
+          <div>
+            <h2 class="text-yellow-500 text-2xl font-bold">
+              guitarist & musician
+            </h2>
+          </div>
+          <div>
+            <h1 class="text-white text-7xl font-bold mb-10">Paul Peavey</h1>
+          </div>
+          <div class="mb-10">
+            <a
+              href="#"
+              class="inline-block border-2 border-yellow-500 px-4 py-2 group hover:bg-yellow-500 transition-all duration-300"
+              ><span class="text-yellow-500 group-hover:text-black"
+                >Of Light And Shadow</span
+              ></a
+            >
+          </div>
+          <div class="flex gap-3">
+            <div class="">
+              <a href="#" class="inline-flex">
+                <span class="">
+                  <svg class="w-[2rem] h-[2rem] fill-yellow-500">
+                    <use href="#instagram"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <!-- social-link -->
+            <div class="">
+              <a href="#" class="inline-flex">
+                <span class="">
+                  <svg
+                    class="w-[2rem] h-[2rem] fill-yellow-500 stroke-transparent"
+                  >
+                    <use href="#pintrest"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="">
+              <a href="#" class="inline-flex">
+                <span class="">
+                  <svg
+                    class="w-[2rem] h-[2rem] fill-yellow-500 stroke-transparent"
+                  >
+                    <use href="#youtub"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="">
+              <a href="#" class="inline-flex">
+                <span class="">
+                  <svg
+                    class="w-[2rem] h-[2rem] fill-yellow-500 stroke-transparent"
+                  >
+                    <use href="#facebook"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- main -->
+    <main class="w-full flex flex-col gap-10 bg-zinc-900">
+      <!-- -----------------------section-one----------------------------->
+      <section class="bg-section-fixe bg-cover bg-center bg-no-repeat bg-fixed">
+        <div class="2xl:container mx-auto flex flex-col *:flex *:w-full">
+          <div
+            class="container mx-auto flex flex-col items-center *:px-3 *:py-5 bg-black lg:translate-y-[-50px]"
+          >
+            <div>
+              <h5 class="text-yellow-500 text-2xl font-bold lg:text-4xl">
+                Guitarist Perfomer Composer Educator
+              </h5>
+            </div>
+            <div>
+              <p class="text-white text-xl text-center">
+                “Peavey’s greatest strength is his ability to separate himself
+                from the crowd that believes intensity goes hand in hand with
+                volume, aggression and excessive effects. He brings a sense of
+                balance and measure to the music that allows him to build
+                tension by contrast, not bombast.”
+              </p>
+            </div>
+            <div>
+              <h6 class="text-white text-2xl">Dan Wilbaski, All about Blues</h6>
+            </div>
+          </div>
+          <div
+            class="w-full flex flex-col justify-items-center items-center gap-5"
+          >
+            <div class="">
+              <h4 class="text-yellow-500 text-4xl font-extrabold">
+                My Prestige Award
+              </h4>
+            </div>
+            <div>
+              <p class="text-white text-xl text-center">
+                Peavey's greatest strength is his ability to separate himself
+                from the crowd that believes
+              </p>
+            </div>
+            <div>
+              <figure>
+                <img src="assets/img/picks.png" alt="" />
+              </figure>
+            </div>
+          </div>
+          <!-- section-about -->
+          <div class="flex flex-wrap *:flex *:w-full *:lg:w-1/2">
+            <!--about-img -->
+            <div>
+              <figure class="w-full h-full">
+                <img
+                  class="object-cover w-full h-full"
+                  src="assets/img/about-me-min-1024x683.jpg"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <!--about-title -->
+            <div
+              class="flex flex-col justify-center p-5 lg:p-20 bg-zinc-900 gap-3"
+            >
+              <div>
+                <h4 class="text-yellow-500 text-4xl font-bold">About Me</h4>
+              </div>
+              <div>
+                <p class="text-white text-xl">
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur et. Etiam porta sem malesuada magna mollis
+                  euismod. Donec id elit non mi porta gravida at eget metus.
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur et. Maecenas sed diam eget risus varius blandit
+                  sit amet non magna.
+                </p>
+                <p class="text-white text-xl">
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur et. Etiam porta sem malesuada magna mollis
+                  euismod. Donec id elit non mi porta gravida at eget metus.
+                  Praesent commodo cursus magna, vel scelerisque. =
+                </p>
+              </div>
+            </div>
+
+            <!--about-tiile -->
+            <div
+              class="flex flex-col justify-center p-5 lg:p-20 bg-zinc-900 gap-3"
+            >
+              <div>
+                <h4 class="text-yellow-500 text-4xl font-bold">
+                  Live & Studio
+                </h4>
+              </div>
+              <div>
+                <p class="text-white text-xl">
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur et. Etiam porta sem malesuada magna mollis
+                  euismod. Donec id elit non mi porta gravida at eget metus.
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur et. Maecenas sed diam eget risus varius blandit
+                  sit amet non magna.
+                </p>
+                <p class="text-white text-xl">
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur et. Etiam porta sem malesuada magna mollis
+                  euismod. Donec id elit non mi porta gravida at eget metus.
+                  Praesent commodo cursus magna, vel scelerisque. =
+                </p>
+              </div>
+            </div>
+            <!--about-image -->
+            <div>
+              <figure class="w-full h-full">
+                <img
+                  class="object-cover w-full h-full"
+                  src="assets/img/about-me-2-min-1024x683.jpg"
+                  alt=""
+                />
+              </figure>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center gap-3">
+            <div class="pt-10">
+              <h4 class="text-yellow-500 text-4xl">Professional Skills</h4>
+            </div>
+            <div class="pb-10">
+              <p class="text-lg text-white">
+                Vivamus magna justo, lacinia eget consectetur sed, convallis at
+                tellus.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap *:w-full *:lg:w-1/2">
+            <div>
+              <figure class="w-full h-full relative">
+                <img
+                  class="w-full h-full object-cover"
+                  src="assets/img/pentatonic-scales-min.jpg"
+                  alt=""
+                />
+                <figcaption
+                  class="text-yellow-500 text-4xl sm:text-6xl absolute bg-transparent w-full h-full top-0 left-0 flex justify-center items-center"
+                >
+                  Music Theory
+                </figcaption>
+              </figure>
+            </div>
+            <div>
+              <figure class="w-full h-full relative">
+                <img
+                  class="w-full h-full object-cover"
+                  src="assets/img/tuning-by-ear.jpg"
+                  alt=""
+                />
+                <figcaption
+                  class="text-yellow-500 text-4xl sm:text-6xl absolute bg-transparent w-full h-full top-0 left-0 flex justify-center items-center"
+                >
+                  Pentatonic scales
+                </figcaption>
+              </figure>
+            </div>
+            <div>
+              <figure class="w-full h-full relative">
+                <img
+                  class="w-full h-full object-cover"
+                  src="assets/img/strumming-patterns-min.jpg"
+                  alt=""
+                />
+                <figcaption
+                  class="text-yellow-500 text-4xl sm:text-6xl absolute bg-transparent w-full h-full top-0 left-0 flex justify-center items-center"
+                >
+                  Tuning By ear
+                </figcaption>
+              </figure>
+            </div>
+            <div>
+              <figure class="w-full h-full relative">
+                <img
+                  class="w-full h-full object-cover"
+                  src="assets/img/stay-in-touch.jpg"
+                  alt=""
+                />
+                <figcaption
+                  class="text-yellow-500 text-4xl sm:text-6xl absolute bg-transparent w-full h-full top-0 left-0 flex justify-center items-center"
+                >
+                  Strumming patterns
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-zinc-900">
+        <div
+          class="2xl:container mx-auto flex flex-col justify-center items-center"
+        >
+          <div class="flex flex-col justify-center items-center gap-3">
+            <div>
+              <h4 class="text-yellow-500 text-4xl pt-10">Guitar Lessons</h4>
+            </div>
+            <div>
+              <p class="text-white text-lg pb-10">
+                Vivamus magna justo, lacinia eget consectetur sed, convallis at
+                tellus
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center *:flex *:w-full *:lg:w-1/2">
+            <div
+              class="bg-guitar-lessons bg-cover bg-center bg-no-repeat h-[500px]"
+            ></div>
+            <div
+              class="px-10 flex flex-col justify-center items-start gap-3 bg-yellow-500 lg:h-[400px] lg:translate-x-[-100px]"
+            >
+              <div>
+                <h6 class="text-4xl">Tab , Techniques&Tips</h6>
+              </div>
+              <div>
+                <p>
+                  Vivamus magna justo, lacinia eget consectetur sed, convallis
+                  at tellus.
+                </p>
+              </div>
+              <div>
+                <p>
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur et. Etiam porta sem malesuada magna mollis
+                  euismod. Donec id elit non mi porta gravida at eget metus.
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur et. Maecenas sed diam eget risus varius blandit
+                  sit amet non magna
+                </p>
+              </div>
+              <div>
+                <p>
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur et. Etiam porta sem malesuada magna mollis
+                  euismod. Donec id elit non mi porta gravida at eget metus.
+                </p>
+              </div>
+              <div>
+                <a
+                  href="#"
+                  class="px-4 py-2 bg-black group hover:bg-white duration-500"
+                >
+                  <span class="text-lg text-yellow-500 group-hover:text-black">
+                    ENDROL
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-zinc-900">
+        <div class="container mx-auto flex flex-col gap-10">
+          <div
+            class="flex flex-col justify-center items-center gap-3 *:w-full *:flex *:justify-center"
+          >
+            <div class="pt-10">
+              <h4 class="text-yellow-500 text-4xl">Next Tours</h4>
+            </div>
+            <div class="pb-10">
+              <p class="text-white text-lg">
+                Vivamus magna justo, lacinia eget consectetur sed, convallis at
+                tellus.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-evenly gap-5 px-5 py-10 bg-black *:w-full *:lg:w-auto"
+          >
+            <div>
+              <span class="text-2xl text-yellow-500 font-extrabold"
+                >06 Jun</span
+              >
+            </div>
+            <div>
+              <span class="text-2xl text-white font-bold">Denver, CO</span>
+            </div>
+            <div>
+              <p class="text-white text-xl font-bold">
+                Vivamus magna justo, lacinia eget consectetur sed
+              </p>
+            </div>
+            <div>
+              <a
+                class="border-2 border-yellow-500 px-4 py-2 group hover:bg-yellow-500 duration-500"
+                href="#"
+              >
+                <span class="text-yellow-500 group-hover:text-black"
+                  >Buy A Ticket</span
+                ></a
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-evenly gap-5 px-5 py-10 bg-black *:w-full *:lg:w-auto"
+          >
+            <div>
+              <span class="text-2xl text-yellow-500 font-extrabold"
+                >17 Aug</span
+              >
+            </div>
+            <div>
+              <span class="text-2xl text-white font-bold">Los Angeles</span>
+            </div>
+            <div>
+              <p class="text-white text-xl font-bold">
+                Vivamus magna justo, lacinia eget consectetur sed
+              </p>
+            </div>
+            <div>
+              <a
+                class="border-2 border-yellow-500 px-4 py-2 group hover:bg-yellow-500 duration-500"
+                href="#"
+              >
+                <span class="text-yellow-500 group-hover:text-black"
+                  >Buy A Ticket</span
+                ></a
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-evenly gap-5 px-5 py-10 bg-black *:w-full *:lg:w-auto"
+          >
+            <div>
+              <span class="text-2xl text-yellow-500 font-extrabold"
+                >25 Sep</span
+              >
+            </div>
+            <div>
+              <span class="text-2xl text-white font-bold">Chicago, MI</span>
+            </div>
+            <div>
+              <p class="text-white text-xl font-bold">
+                Vivamus magna justo, lacinia eget consectetur sed
+              </p>
+            </div>
+            <div>
+              <a
+                class="border-2 border-yellow-500 px-4 py-2 group hover:bg-yellow-500 duration-500"
+                href="#"
+              >
+                <span class="text-yellow-500 group-hover:text-black"
+                  >Buy A Ticket</span
+                ></a
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap justify-evenly gap-5 px-5 py-10 bg-black *:w-full *:lg:w-auto"
+          >
+            <div>
+              <span class="text-2xl text-yellow-500 font-extrabold"
+                >23 Mar</span
+              >
+            </div>
+            <div>
+              <span class="text-2xl text-white font-bold">Phoneix, AR</span>
+            </div>
+            <div>
+              <p class="text-white text-xl font-bold">
+                Vivamus magna justo, lacinia eget consectetur sed
+              </p>
+            </div>
+            <div>
+              <a
+                class="border-2 border-yellow-500 px-4 py-2 group hover:bg-yellow-500 duration-500"
+                href="#"
+              >
+                <span class="text-yellow-500 group-hover:text-black"
+                  >Buy A Ticket</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-zinc-900">
+        <div class="container mx-auto">
+          <div
+            class="flex flex-wrap items-center gap-5 lg:gap-0 *:flex *:w-full *:lg:w-1/2"
+          >
+            <div
+              class="bg-guitar-stay-in-tuch bg-cover bg-center bg-no-repeat h-[500px]"
+            ></div>
+            <div
+              class="px-10 flex flex-col justify-center items-start gap-3 lg:h-[400px] lg:translate-x-[-100px]"
+            >
+              <div>
+                <h6 class="text-4xl text-yellow-500">
+                  Stay In Touch With Me, Get Every Day, New Tabs, Tips & Tricks
+                </h6>
+              </div>
+              <div>
+                <p class="text-white text-lg">
+                  Vivamus magna justo, lacinia eget consectetur sed, convallis
+                  at tellus.
+                </p>
+              </div>
+
+              <div class="w-full flex flex-wrap gap-1 *:w-full">
+                <input
+                  class="outline-none border-none py-3 ps-1 lg:w-2/4"
+                  type="email"
+                  placeholder="Enter Email Address"
+                />
+                <button
+                  class="border-2 border-yellow-500 px-4 py-2 group hover:bg-yellow-500 duration-500 lg:w-1/4"
+                >
+                  <span class="text-yellow-500 group-hover:text-black">
+                    SUBSCRIBE
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+        <div class="container mx-auto flex flex-wrap *:w-full *:lg:w-1/4">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </footer>
+  </body>
+</html>

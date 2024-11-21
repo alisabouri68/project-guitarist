@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: PermanentMarker-Regular;
+        src: url(../fonts/PermanentMarker-Regular.ttf);
+    }
+}
+
+@layer components {
+    .bordertest {
+        @apply border border-red-700 
+    }
+    .flex-center {
+        @apply flex justify-center items-center
+    }
+    .flex-between {
+        @apply flex justify-between items-center
+    }
+}
+body{
+    font-family: PermanentMarker-Regular;
+}
