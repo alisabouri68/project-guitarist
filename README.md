@@ -1,4 +1,4 @@
-Visit Full SiteGuitarist
+Guitarist
 ========================
 
 * * *
@@ -12,7 +12,7 @@ Preview screenshot
 
 * * *
 
-![](![guitarist-02-home](https://github.com/user-attachments/assets/ba99210b-a8cf-4650-80b7-507913471242))
+![guitarist-02-home](https://github.com/user-attachments/assets/ba99210b-a8cf-4650-80b7-507913471242)
 
 * * *
 
